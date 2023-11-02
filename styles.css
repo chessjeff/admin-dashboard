@@ -9,7 +9,7 @@ body {
         "sidebar header"
         "sidebar main";
     grid-template-columns: 1fr 4fr;
-    grid-template-rows:1fr 5fr ;
+    grid-template-rows:1fr 1fr ;
     margin: 0px;
     height: 100vh;
 }
@@ -46,13 +46,9 @@ li > svg {
     fill: white;
     height: 2rem;
     width:2rem;
-    /* remove */
-    background-color: transparent; 
 }
 
-/* temp */
 img {
-    background-color: orange;
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
@@ -61,7 +57,7 @@ img {
 .sidebar {
     grid-area: sidebar;
     color: white;
-    background-color: blue;
+    background-color: #3B5249;
 }
 
 .sidebar-list {
@@ -92,21 +88,25 @@ img {
     background-color: white;
     display: grid;
     grid-template-rows: 1fr 2fr;
-    padding: 1rem 2rem;
+    padding: 1rem;
     padding-bottom: 0px;
 }
 
 .header-top-row {
     display: grid;
-    grid-template-columns: 1fr 12fr 1fr 1fr 3fr ;
+    grid-template-columns: 1fr 14fr 1fr 1fr 3fr ;
     align-items: center;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
+.header-top-row > svg:first-child {
+    justify-self: center;
+}
+
 .header-top-row > input {
-    width: 90%;
-    background-color: lightgrey;
+    width: 80%;
+    background-color: #BEC5AD;
     border-radius: 20px;
     border: 0px;
     padding: .5rem;
@@ -115,9 +115,15 @@ img {
 
 .header-bottom-row {
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
     align-items: center;
     margin: 0px;
+}
+
+.header-bottom-row > img {
+    justify-self: center;
+    width:5rem;
+    height: 5rem;
 }
 
 .greeting-text {
@@ -125,27 +131,26 @@ img {
 }
 
 .header-buttons {
-    justify-self: center;
-    width: 70%;
+    justify-self: start;
+    width: 80%;
     height: 40%;
     border: 0px;
     border-radius: 20px;
-    background-color: lightblue;
+    background-color: #3B5249;
     color: white;
-
 }
 
 .main {
     grid-area: main;
-    background-color: grey;
+    background-color: #BEC5AD;
     display: grid;
-    gap: 1.1rem;
-    grid-template-columns: 2fr 1fr;
+    gap: 0vh 2vw;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
         "projects announcements"
         "projects trending";
-    padding: 1.5rem;
+    padding: 2vh 1vw 5vh 1vw;
 }
 
 .projects {
@@ -161,23 +166,23 @@ img {
 }
 
 .project-cards {
-    height: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.1rem;
+    gap: 1rem;
 }
 
 .card {
     background-color: white;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
+    padding: 1.2rem;
 }
 
 .main-card {
-    border-left: 10px solid goldenrod;
+    border-left: 10px solid #519872;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
-    padding: 1.5rem;
+    padding: 1vh 1vw 2vh 2vw;
 }
 
 .main-card > h5 {
@@ -197,24 +202,24 @@ img {
     justify-content: flex-end;
 }
 
-.announcement-card {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 85%;
+.main-card-imgs > svg {
+    align-self: center;
+    padding: .7rem;
 }
 
-.announcement-card > div:nth-child(1),
-.announcement-card > div:nth-child(2) {
+
+.announcement-wrapper > div {
     border-bottom: 1px solid grey;
-    padding: 1rem 0px;
+    padding: 1rem;
 }
 
-.trending-card {
-    display:grid;
-    height: 79%;
-    align-items: center;
+.announcement-wrapper > div:last-child {
+    border: none;
+}
+
+.announcement-text {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: .9rem;
 }
 
 .trender {
