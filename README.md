@@ -1,1 +1,1 @@
-# admin-dashboard
+Admin dashboard template made for The Odin Project created with the purpose of getting a better handling of CSS Grid and other "intermediate" CSS and HTML techniques.
